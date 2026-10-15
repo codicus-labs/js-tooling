@@ -23,3 +23,7 @@
   dir: packages/configs
   intents:
     - split-eslint-svelte
+"@codicus/eslint-svelte@0.1.1":
+  dir: packages/eslint-svelte
+  intents:
+    - eslint-svelte-trusted-publishing
