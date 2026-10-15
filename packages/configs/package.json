@@ -1,7 +1,7 @@
 {
     "name": "@codicus/configs",
     "version": "0.7.0",
-    "description": "Shared Oxlint, Oxfmt, and TypeScript configurations",
+    "description": "Shared Oxlint, Oxfmt, ESLint, and TypeScript configurations",
     "license": "UNLICENSED",
     "repository": {
         "type": "git",
@@ -17,6 +17,10 @@
         "./oxlint": {
             "types": "./dist/oxlint.d.mts",
             "default": "./dist/oxlint.mjs"
+        },
+        "./eslint": {
+            "types": "./dist/eslint.d.mts",
+            "default": "./dist/eslint.mjs"
         },
         "./lint-rules": {
             "types": "./dist/lint-rules/index.d.mts",
@@ -40,6 +44,7 @@
     },
     "devDependencies": {
         "@oxlint/plugins": "1.79.0",
+        "eslint": "10.9.0",
         "oxfmt": "0.64.0",
         "oxlint": "1.79.0",
         "tsdown": "0.23.0",
@@ -47,6 +52,7 @@
     },
     "peerDependencies": {
         "@types/node": ">=24 <27",
+        "eslint": ">=10 <11",
         "oxfmt": ">=0.64 <1",
         "oxlint": ">=1.79 <2",
         "oxlint-tsgolint": ">=7 <8",
@@ -54,6 +60,9 @@
     },
     "peerDependenciesMeta": {
         "@types/node": {
+            "optional": true
+        },
+        "eslint": {
             "optional": true
         },
         "oxfmt": {

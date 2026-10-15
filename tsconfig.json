@@ -1,16 +1,7 @@
 {
     "extends": "./packages/configs/tsconfig/node.json",
     "compilerOptions": {
-        "tsBuildInfoFile": "./node_modules/.cache/tsconfig.tsbuildinfo",
-        "paths": {
-            "@codicus/configs/lint-rules": ["./packages/configs/src/lint-rules/index.ts"]
-        }
+        "tsBuildInfoFile": "./node_modules/.cache/tsconfig.tsbuildinfo"
     },
-    "include": [
-        "packages/configs/src/**/*.ts",
-        "packages/configs/*.config.ts",
-        "packages/eslint-svelte/src/**/*.ts",
-        "packages/eslint-svelte/*.config.ts",
-        "*.config.ts"
-    ]
+    "include": ["packages/configs/src/**/*.ts", "packages/configs/*.config.ts", "*.config.ts"]
 }

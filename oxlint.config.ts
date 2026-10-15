@@ -12,7 +12,7 @@ export default defineConfig({
             rules: { 'codicus/package-boundaries': 'off' },
         },
         {
-            files: ['packages/eslint-svelte/src/index.ts'],
+            files: ['packages/configs/src/eslint.ts'],
             rules: {
                 'codicus/no-chained-type-assertions': 'off',
                 'typescript/no-unsafe-type-assertion': 'off',
