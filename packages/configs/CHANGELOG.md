@@ -1,5 +1,11 @@
 # @codicus/configs
 
+## 0.8.0
+
+### Minor Changes
+
+- Add the `eslint` subpath with the Codicus rule policy for ESLint projects. It replaces `@codicus/eslint-svelte`; projects now configure parsers, Svelte, and typescript-eslint presets themselves.
+
 ## 0.7.0
 
 ### Minor Changes
