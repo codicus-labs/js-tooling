@@ -23,6 +23,10 @@
   dir: packages/configs
   intents:
     - split-eslint-svelte
+"@codicus/configs@0.8.0":
+  dir: packages/configs
+  intents:
+    - eslint-rule-policy
 "@codicus/eslint-svelte@0.1.1":
   dir: packages/eslint-svelte
   intents:
