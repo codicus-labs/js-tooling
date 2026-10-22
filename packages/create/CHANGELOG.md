@@ -1,5 +1,11 @@
 # @codicus/create
 
+## 0.1.1
+
+### Patch Changes
+
+- Remove the empty `AGENTS.md` from the `typescript-library` template; `vp create --agent` writes agent instructions when needed.
+
 ## 0.1.0
 
 ### Minor Changes

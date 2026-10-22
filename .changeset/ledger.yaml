@@ -35,6 +35,10 @@
   dir: packages/create
   intents:
     - add-create-package
+"@codicus/create@0.1.1":
+  dir: packages/create
+  intents:
+    - create-drop-empty-agents
 "@codicus/eslint-svelte@0.1.1":
   dir: packages/eslint-svelte
   intents:
