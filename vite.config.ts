@@ -1,24 +1,18 @@
 import { defineConfig } from 'vite-plus';
 
-import fmtPreset from './packages/configs/src/oxfmt.ts';
-import lintPreset from './packages/configs/src/oxlint.ts';
+import codicus from './packages/configs/src/vite-plus.ts';
 
 export default defineConfig({
-    staged: {
-        '*': 'vp check --fix --no-error-on-unmatched-pattern',
-    },
-    fmt: fmtPreset,
+    ...codicus,
     lint: {
-        ...lintPreset,
-        ignorePatterns: [...lintPreset.ignorePatterns, 'packages/create/templates/**'],
+        ...codicus.lint,
+        ignorePatterns: [...codicus.lint.ignorePatterns, 'packages/create/templates/**'],
         jsPlugins: [
             { name: 'codicus', specifier: './packages/configs/src/lint-rules/index.ts' },
             { name: 'vite-plus', specifier: 'vite-plus/oxlint-plugin' },
         ],
-        options: { ...lintPreset.options, typeCheck: true },
-        rules: { ...lintPreset.rules, 'vite-plus/prefer-vite-plus-imports': 'error' },
         overrides: [
-            ...lintPreset.overrides,
+            ...codicus.lint.overrides,
             {
                 files: ['vite.config.ts'],
                 rules: { 'codicus/package-boundaries': 'off' },

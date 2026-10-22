@@ -1,6 +1,6 @@
-import { defineConfig } from 'oxfmt';
+import type { OxfmtConfig } from 'vite-plus/fmt';
 
-export default defineConfig({
+const fmt = {
     arrowParens: 'always',
     endOfLine: 'lf',
     ignorePatterns: ['.changeset/', '**/.memory/', '**/.svelte-kit/', '**/CHANGELOG.md', '**/dist/'],
@@ -12,4 +12,7 @@ export default defineConfig({
     useTabs: false,
     sortPackageJson: true,
     sortImports: true,
-});
+    svelte: true,
+} satisfies OxfmtConfig;
+
+export default fmt;

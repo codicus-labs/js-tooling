@@ -3,9 +3,10 @@ import { defineConfig } from 'vite-plus';
 export default defineConfig({
     pack: {
         entry: {
-            oxlint: 'src/oxlint.ts',
+            'vite-plus': 'src/vite-plus.ts',
+            lint: 'src/lint.ts',
+            fmt: 'src/fmt.ts',
             eslint: 'src/eslint.ts',
-            oxfmt: 'src/oxfmt.ts',
             'lint-rules/index': 'src/lint-rules/index.ts',
         },
         format: 'esm',

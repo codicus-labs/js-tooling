@@ -1,7 +1,7 @@
 import { existsSync, globSync, readFileSync, realpathSync, statSync } from 'node:fs';
 import { dirname, extname, isAbsolute, join, relative, resolve, sep } from 'node:path';
 
-import type { ESTree, Rule } from '@oxlint/plugins';
+import type { ESTree, Rule } from 'vite-plus/lint/plugins';
 
 type JsonObject = Record<string, unknown>;
 

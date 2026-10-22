@@ -1,26 +1,34 @@
 # @codicus/configs
 
-Shared Oxlint, Oxfmt and TypeScript configs for Node 24+ projects. For a new TypeScript library, start from the [TypeScript library template](https://github.com/codicus-labs/typescript-library-template); configure tests, CI and Git hooks in the project.
+Shared Vite+, ESLint and TypeScript configs for Node 24+ projects. For a new TypeScript library, run `vp create @codicus:typescript-library`.
 
-## TypeScript 7: Oxlint
+## Vite+
 
 ```sh
-pnpm add -D @codicus/configs typescript@^7 oxlint oxlint-tsgolint oxfmt @types/node
+pnpm add -D @codicus/configs vite-plus typescript @types/node
 ```
 
 ```ts
-// oxlint.config.ts
-export { default } from '@codicus/configs/oxlint';
+// vite.config.ts
+import codicus from '@codicus/configs/vite-plus';
+import { defineConfig } from 'vite-plus';
+
+export default defineConfig({
+    ...codicus,
+});
 ```
+
+`@codicus/configs/vite-plus` sets `staged`, `fmt` and `lint`; `vp check` then formats, lints and typechecks. Use `@codicus/configs/lint` and `@codicus/configs/fmt` to take only one preset or to extend it:
 
 ```ts
-// oxfmt.config.ts
-export { default } from '@codicus/configs/oxfmt';
+lint: { ...codicus.lint, env: { node: true } },
 ```
 
-The shared Oxfmt preset leaves Svelte formatting and Tailwind class sorting disabled; enable either in your project's `oxfmt.config.ts` when needed.
+Have the project tsconfig extend `@codicus/configs/tsconfig/base.json`, or `@codicus/configs/tsconfig/node.json` for a standalone Node project.
 
-In the library template, have `configs/tsconfig.base.json` extend `@codicus/configs/tsconfig/base.json`; keep source paths, cache locations and project references local. For a standalone Node project, extend `@codicus/configs/tsconfig/node.json`. Set `env: { node: true }` in the project Oxlint config if you need Node globals. Run `pnpm exec oxlint .` and `pnpm exec oxfmt --check .`.
+### Vue and Svelte
+
+Oxlint lints the `<script>` blocks of `.vue` and `.svelte` files, including the `vue` plugin rules. Type-aware rules and `typeCheck` only cover TypeScript files; run `vue-tsc` or `svelte-check` for components. Oxfmt formats Vue and Svelte files. Tailwind class sorting stays disabled; enable it in the project's `fmt` when needed.
 
 ## ESLint
 

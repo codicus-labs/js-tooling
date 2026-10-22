@@ -36,12 +36,8 @@
             ".": {},
             "packages/configs": {
                 "entry": [
-                    "src/{oxlint,eslint,oxfmt}.ts",
+                    "src/{vite-plus,lint,fmt,eslint}.ts",
                     "src/lint-rules/index.ts"
-                ],
-                "ignoreDependencies": [
-                    "oxfmt",
-                    "oxlint"
                 ]
             }
         }

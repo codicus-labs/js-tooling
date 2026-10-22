@@ -1,4 +1,4 @@
-import type { ESTree, Rule, SourceCode } from '@oxlint/plugins';
+import type { ESTree, Rule, SourceCode } from 'vite-plus/lint/plugins';
 
 function isReflectMethod(sourceCode: SourceCode, callee: ESTree.Expression, method: 'apply' | 'get'): boolean {
     if (callee.type !== 'MemberExpression' || callee.object.type !== 'Identifier') return false;

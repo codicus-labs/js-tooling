@@ -1,4 +1,4 @@
-import type { ESTree, Rule } from '@oxlint/plugins';
+import type { ESTree, Rule } from 'vite-plus/lint/plugins';
 
 import { classifyBroadTarget, hasKnownValue, type BroadTarget } from './no-known-value-widening.ts';
 import {

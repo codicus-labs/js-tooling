@@ -1,4 +1,4 @@
-import type { Plugin } from '@oxlint/plugins';
+import type { Plugin } from 'vite-plus/lint/plugins';
 
 import { noChainedTypeAssertions } from './no-chained-type-assertions.ts';
 import { noKnownValueWidening } from './no-known-value-widening.ts';

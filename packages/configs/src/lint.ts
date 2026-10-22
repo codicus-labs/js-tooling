@@ -1,6 +1,6 @@
-import { defineConfig } from 'oxlint';
+import type { OxlintConfig } from 'vite-plus/lint';
 
-const baseConfig = defineConfig({
+const lint = {
     categories: {
         correctness: 'error',
         perf: 'warn',
@@ -11,10 +11,14 @@ const baseConfig = defineConfig({
         reportUnusedDisableDirectives: 'error',
         respectEslintDisableDirectives: false,
         typeAware: true,
+        typeCheck: true,
     },
     ignorePatterns: ['**/coverage/**', '**/dist/**', '**/node_modules/**', '**/*.generated.*'],
-    jsPlugins: [{ name: 'codicus', specifier: '@codicus/configs/lint-rules' }],
-    plugins: ['eslint', 'import', 'promise', 'typescript', 'unicorn', 'vitest'],
+    jsPlugins: [
+        { name: 'codicus', specifier: '@codicus/configs/lint-rules' },
+        { name: 'vite-plus', specifier: 'vite-plus/oxlint-plugin' },
+    ],
+    plugins: ['eslint', 'import', 'promise', 'typescript', 'unicorn', 'vitest', 'vue'],
     overrides: [
         {
             files: ['**/*.{test,spec}.{js,ts}'],
@@ -78,7 +82,8 @@ const baseConfig = defineConfig({
         'typescript/no-misused-promises': 'error',
         'typescript/restrict-template-expressions': 'error',
         'typescript/switch-exhaustiveness-check': 'error',
+        'vite-plus/prefer-vite-plus-imports': 'error',
     },
-});
+} satisfies OxlintConfig;
 
-export default baseConfig;
+export default lint;

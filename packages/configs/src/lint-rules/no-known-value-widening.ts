@@ -1,4 +1,4 @@
-import type { ESTree, Rule, SourceCode, Variable } from '@oxlint/plugins';
+import type { ESTree, Rule, SourceCode, Variable } from 'vite-plus/lint/plugins';
 
 import { isStableConst, resolveVariable, unwrapExpression, unwrapType, variableDeclarator } from './shared.ts';
 
