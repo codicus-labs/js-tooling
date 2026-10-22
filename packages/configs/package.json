@@ -37,7 +37,7 @@
         "access": "public"
     },
     "scripts": {
-        "build": "tsdown"
+        "build": "vp pack"
     },
     "dependencies": {
         "@tsconfig/node24": "24.0.5"
@@ -45,10 +45,8 @@
     "devDependencies": {
         "@oxlint/plugins": "1.79.0",
         "eslint": "10.9.0",
-        "oxfmt": "0.64.0",
-        "oxlint": "1.79.0",
-        "tsdown": "0.23.0",
-        "typescript": "6.0.3"
+        "typescript": "6.0.3",
+        "vite-plus": "catalog:"
     },
     "peerDependencies": {
         "@types/node": ">=24 <27",

@@ -3,34 +3,17 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "pnpm -r build",
-        "check": "pnpm run '/^(typecheck|lint|format:check|unused)$/'",
-        "format": "oxfmt .",
-        "format:check": "oxfmt --check .",
-        "lint": "oxlint .",
-        "hooks:install": "git config core.hooksPath .githooks",
-        "prepare": "pnpm run build",
-        "typecheck": "tsc -p tsconfig.json",
-        "unused": "knip"
+        "build": "vp run -r build",
+        "check": "vp check && knip",
+        "prepare": "vp config && vp run build"
     },
     "devDependencies": {
         "@commitlint/cli": "21.2.3",
         "@commitlint/config-conventional": "21.2.2",
         "@types/node": "26.1.0",
         "knip": "6.37.0",
-        "lint-staged": "17.5.1",
-        "oxfmt": "0.64.0",
-        "oxlint": "1.79.0",
-        "oxlint-tsgolint": "7.0.2002",
-        "svelte": "5.57.1",
-        "typescript": "6.0.3"
-    },
-    "lint-staged": {
-        "*.{js,ts}": [
-            "oxfmt",
-            "oxlint --fix --no-error-on-unmatched-pattern"
-        ],
-        "*.{json,jsonc,md,mdx,yaml,yml,css,scss,svelte,html}": "oxfmt"
+        "typescript": "6.0.3",
+        "vite-plus": "catalog:"
     },
     "commitlint": {
         "extends": [
@@ -46,8 +29,20 @@
             "packages/pnpm-plugin/pnpmfile.mjs"
         ],
         "ignoreDependencies": [
-            "@commitlint/cli",
-            "lint-staged"
-        ]
+            "@commitlint/cli"
+        ],
+        "workspaces": {
+            ".": {},
+            "packages/configs": {
+                "entry": [
+                    "src/{oxlint,eslint,oxfmt}.ts",
+                    "src/lint-rules/index.ts"
+                ],
+                "ignoreDependencies": [
+                    "oxfmt",
+                    "oxlint"
+                ]
+            }
+        }
     }
 }

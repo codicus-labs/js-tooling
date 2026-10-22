@@ -19,12 +19,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v6
-            - uses: pnpm/action-setup@v4
-            - uses: actions/setup-node@v6
+            - uses: voidzero-dev/setup-vp@v1.21.2
               with:
                   node-version-file: .node-version
-                  cache: pnpm
-            - run: pnpm install --frozen-lockfile
-            - run: pnpm build
-            - run: pnpm check
+                  cache: true
+            - run: vp run build
+            - run: vp run check
             - run: pnpm -r publish --access public --provenance --no-git-checks --registry=https://registry.npmjs.org/
