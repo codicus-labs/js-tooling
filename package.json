@@ -1,5 +1,5 @@
 {
-    "name": "js-tooling-configs",
+    "name": "js-tooling",
     "private": true,
     "type": "module",
     "scripts": {

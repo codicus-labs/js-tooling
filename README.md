@@ -1,4 +1,4 @@
-# js-tooling-configs
+# js-tooling
 
 - [`@codicus/configs`](packages/configs/README.md): Oxlint, Oxfmt, ESLint, and TypeScript presets.
 - [`@codicus/pnpm-plugin-configs`](packages/pnpm-plugin/README.md): pnpm installation policy.

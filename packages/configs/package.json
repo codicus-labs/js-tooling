@@ -5,7 +5,7 @@
     "license": "UNLICENSED",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/codicus-labs/js-tooling-configs.git",
+        "url": "git+https://github.com/codicus-labs/js-tooling.git",
         "directory": "packages/configs"
     },
     "files": [
