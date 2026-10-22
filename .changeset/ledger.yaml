@@ -31,6 +31,10 @@
   dir: packages/configs
   intents:
     - rename-repository
+"@codicus/create@0.1.0":
+  dir: packages/create
+  intents:
+    - add-create-package
 "@codicus/eslint-svelte@0.1.1":
   dir: packages/eslint-svelte
   intents:
