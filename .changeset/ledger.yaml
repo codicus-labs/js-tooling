@@ -27,7 +27,15 @@
   dir: packages/configs
   intents:
     - eslint-rule-policy
+"@codicus/configs@0.8.1":
+  dir: packages/configs
+  intents:
+    - rename-repository
 "@codicus/eslint-svelte@0.1.1":
   dir: packages/eslint-svelte
   intents:
     - eslint-svelte-trusted-publishing
+"@codicus/pnpm-plugin-configs@0.1.1":
+  dir: packages/pnpm-plugin
+  intents:
+    - rename-repository
