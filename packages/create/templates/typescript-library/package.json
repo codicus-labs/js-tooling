@@ -1,0 +1,37 @@
+{
+    "name": "your-library-name",
+    "private": true,
+    "type": "module",
+    "exports": {
+        ".": "./dist/index.mjs",
+        "./package.json": "./package.json"
+    },
+    "scripts": {
+        "build": "vp pack",
+        "check": "vp check && vp test run && knip",
+        "prepare": "vp config"
+    },
+    "devDependencies": {
+        "@codicus/configs": "0.8.1",
+        "@commitlint/cli": "^21.2.3",
+        "@commitlint/config-conventional": "^21.2.3",
+        "@types/node": "^24.0.0",
+        "knip": "^6.37.0",
+        "typescript": "^7.0.2",
+        "vite-plus": "catalog:"
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
+    "engines": {
+        "node": ">=24 <25"
+    },
+    "packageManager": "pnpm@12.14.0",
+    "knip": {
+        "ignoreDependencies": [
+            "@commitlint/cli"
+        ]
+    }
+}

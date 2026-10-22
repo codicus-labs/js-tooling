@@ -1,0 +1,3 @@
+{
+    "extends": "@codicus/configs/tsconfig/base.json"
+}

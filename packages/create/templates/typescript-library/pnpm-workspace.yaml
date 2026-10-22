@@ -1,0 +1,14 @@
+configDependencies:
+    '@codicus/pnpm-plugin-configs': 0.1.0
+engineStrict: true
+trustPolicy: no-downgrade
+catalog:
+    vite: npm:@voidzero-dev/vite-plus-core@1.3.0
+    vite-plus: 1.3.0
+overrides:
+    vite@*: 'catalog:'
+peerDependencyRules:
+    allowAny:
+        - vite
+    allowedVersions:
+        vite: '*'

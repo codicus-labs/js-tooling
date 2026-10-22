@@ -26,7 +26,8 @@
     "packageManager": "pnpm@12.14.0",
     "knip": {
         "ignore": [
-            "packages/pnpm-plugin/pnpmfile.mjs"
+            "packages/pnpm-plugin/pnpmfile.mjs",
+            "packages/create/templates/**"
         ],
         "ignoreDependencies": [
             "@commitlint/cli"

@@ -10,6 +10,7 @@ export default defineConfig({
     fmt: fmtPreset,
     lint: {
         ...lintPreset,
+        ignorePatterns: [...lintPreset.ignorePatterns, 'packages/create/templates/**'],
         jsPlugins: [
             { name: 'codicus', specifier: './packages/configs/src/lint-rules/index.ts' },
             { name: 'vite-plus', specifier: 'vite-plus/oxlint-plugin' },

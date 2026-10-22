@@ -1,0 +1,27 @@
+{
+    "name": "@codicus/create",
+    "version": "0.0.0",
+    "description": "Codicus project templates for vp create",
+    "license": "UNLICENSED",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/codicus-labs/js-tooling.git",
+        "directory": "packages/create"
+    },
+    "files": [
+        "templates"
+    ],
+    "type": "module",
+    "publishConfig": {
+        "access": "public"
+    },
+    "createConfig": {
+        "templates": [
+            {
+                "name": "typescript-library",
+                "description": "TypeScript library with Vite+ and the Codicus presets",
+                "template": "./templates/typescript-library"
+            }
+        ]
+    }
+}
