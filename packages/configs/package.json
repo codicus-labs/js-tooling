@@ -1,6 +1,6 @@
 {
     "name": "@codicus/configs",
-    "version": "0.8.0",
+    "version": "0.8.1",
     "description": "Shared Oxlint, Oxfmt, ESLint, and TypeScript configurations",
     "license": "UNLICENSED",
     "repository": {

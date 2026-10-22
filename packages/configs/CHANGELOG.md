@@ -1,5 +1,11 @@
 # @codicus/configs
 
+## 0.8.1
+
+### Patch Changes
+
+- Point package repository metadata to the renamed `codicus-labs/js-tooling` repository.
+
 ## 0.8.0
 
 ### Minor Changes
