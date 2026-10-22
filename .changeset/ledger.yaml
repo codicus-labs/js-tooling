@@ -31,6 +31,10 @@
   dir: packages/configs
   intents:
     - rename-repository
+"@codicus/configs@0.9.0":
+  dir: packages/configs
+  intents:
+    - configs-vite-plus
 "@codicus/create@0.1.0":
   dir: packages/create
   intents:
